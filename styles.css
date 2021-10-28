@@ -1,5 +1,22 @@
+:root {
+  --violet: hsl(238, 29%, 16%);
+  --lightBlue: hsl(240, 73%, 65%);
+  --hoverRed: hsl(14, 88%, 65%);
+  --ActiveHead: hsl(237, 12%, 33%);
+  --innerAccordText: hsl(237, 12%, 33%);
+  --dividerColor: hsl(240, 5%, 91%);
+}
+
 html {
   height: 100%;
+  font-family: "Kumbh Sans", sans-serif;
+  color: var(--violet);
+}
+
+.heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5rem 0 0 0;
 }
 
 body {
@@ -22,14 +39,51 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: left;
   background-color: white;
-  width: 70%;
+  width: 90%;
   position: relative;
-  height: 20rem;
-
-  /* left: 15%; */
+  height: 70rem;
+  bottom: 5rem;
+  border-radius: 30px;
 }
+
+.panel {
+  display: none;
+  width: 100%;
+}
+
+.accordian-image {
+  width: 70%;
+  height: 70%;
+  top: 1rem;
+  position: relative;
+  z-index: 10;
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+.accordian {
+  color: var(--violet);
+  border: none;
+  border-bottom: var(--dividerColor) 1px solid;
+  padding: 1rem 0 1rem 0;
+  text-align: left;
+  align-self: stretch;
+  background: none;
+  position: relative;
+  left: 1rem;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.accordian:hover {
+  cursor: pointer;
+  color: var(--hoverRed);
+}
+
+.downArrow {
+  width: 10px;
+  height: 7px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -40,18 +94,4 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-.panel {
-  display: none;
-  width: 100%;
-}
-
-.accordian-image {
-  width: 40%;
-  height: 40%;
-  position: relative;
-}
-.accordian {
-  width: 80%;
 }
