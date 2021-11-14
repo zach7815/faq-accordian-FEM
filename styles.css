@@ -41,7 +41,7 @@ body {
   background-color: rgba(255, 255, 255, 0.87);
   border-radius: 30px;
   -webkit-filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.12));
-  filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.12));
+  filter: drop-shadow(0px 29px 3px rgba(29, 30, 53, 0.12));
   align-items: center;
 }
 
@@ -141,7 +141,7 @@ body {
 
 @media screen and (max-width: 899px) {
   .image-container {
-    content: url("/images/illustration-woman-online-mobile.svg");
+    content: url("./images/illustration-woman-online-mobile.svg");
     position: relative;
     bottom: 7rem;
     -webkit-filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.07));
@@ -181,7 +181,10 @@ body {
   }
 }
 
-@media screen and (min-height: 875px) {
+@media screen and (max-height: 915px) {
+  .panel {
+    font-size: 0.6rem;
+  }
 }
 
 /* desktop width media queries */
@@ -208,7 +211,7 @@ body {
   .image-container {
     overflow: hidden;
     height: 33.25rem;
-    background-image: url(/images/bg-pattern-desktop.svg);
+    background-image: url(./images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-position: 116% 65%;
   }
@@ -287,7 +290,7 @@ body {
 
 @media screen and (max-height: 428px) and (max-width: 926px) {
   .image-container {
-    content: url("/images/illustration-woman-online-mobile.svg");
+    content: url("./images/illustration-woman-online-mobile.svg");
     position: relative;
     -webkit-filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.07));
     filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.07));

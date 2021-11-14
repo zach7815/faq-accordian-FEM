@@ -1,94 +1,107 @@
-# Frontend Mentor - FAQ accordion card
+# Frontend Mentor - FAQ accordion card solution
 
-![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+This was my first Front End Mentor Challenge that used Javascript as well. It is mockup of creating a FAQ Accordian that some businesses may use to answer customer frequently asked questions.
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this FAQ accordion card and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Hide/Show the answer to a question when the question is clicked
-- **Bonus**: Complete the challenge without using JavaScript
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](screenshots/Desktop-view.png)
+![](screenshots/Mobile-view.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [Add solution URL here](https://github.com/zach7815/faq-accordian-FEM)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+My process for this was a bit chaotic. I initially started out well doing the HTML but came unstuck in trying to do some CSS elements. This resulted in me needing to change the HTML to be a better structure after looking at other peoples solutions for inspiration.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+I then worked on the CSS, but didn't complete it ie make it completely responsive for all media port sizes. I moved a bit too quickly onto the JS.
 
-## Building your project
+I think next time it would be better for me to really think about how best to group things in the HTML and then complete the CSS first as while the JS in this project and probably the next will need some CSS fixes once it is working. It is probably better to keep the processes seperate so I can better focus on the specific problems of the language I am using.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Built with
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- JavaScript
 
-## Deploying your project
+### What I learned
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+There was quite a few things that I learnt from this challenge. The main things I learnt in therms of CSS were:
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- filter and drop shadow for SVG shapes instead of box shadow.
+- The use of overflow, and absolute positioning to make shapes overlap container divs for the @box image.
+- I also learnt how to combine media queries to specifically target certian phone sizes for both portrait and landscape mode.
+- I also made use of root variables to allow me to store design colours that made it easier to add for required colours for different elements.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+For Js:
 
-## Create a custom `README.md`
+- I learnt that you need to loop over node lists if you want to target them.
+- I also learnt how to use classes and CSS transition to give JS interactivity a smoother feel.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+To see how you can add code snippets, see below:
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+```css
+:root {
+  --violet: hsl(238, 29%, 16%);
+  --lightBlue: hsl(240, 73%, 65%);
+  --hoverRed: hsl(14, 88%, 65%);
+  --ActiveHead: hsl(237, 12%, 33%);
+  --innerAccordText: hsl(237, 12%, 33%);
+  --dividerColor: hsl(240, 5%, 91%);
+}
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+```js
+for (let i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+    hideAll();
+    this.classList.add("active");
+    downArrow[i].classList.add("rotate");
+    this.nextElementSibling.style.maxHeight = this.scrollHeight + "px";
+  });
+}
+```
 
-## Submitting your solution
+### Continued development
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+I think my next step is to build a design of my first version of my own website portfolio I have planned and made. Once done, I think I will want to build more Front End Mentor projects that include JS functionality but approach the project in a more logical approach, as in this one I kept switching back and forth from editing the CSS and JS.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+### Useful resources
 
-## Sharing your solution
+- [StackOverflow post on overflow](https://stackoverflow.com/questions/12013066/how-to-ignore-parent-elements-overflowhidden-in-css) - This helped me understand and achieve getting the box image to overflow its container element but not be cut up, allowing me to keep of the images together in one div.
+- [CSS tricks- drop shadow post](https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/) - This guide helped me understand why my original shadows for the SVGs were so bad, and also help me learn how to position the shadows needed.
 
-There are multiple places you can share your solution:
+## Zachariah Kozlowski-Best
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/zach7815)
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
