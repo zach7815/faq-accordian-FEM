@@ -13,17 +13,10 @@ html {
   color: var(--violet);
 }
 
-.heading {
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 1rem 0 0 0;
-}
-
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url("/images/bg-pattern-mobile.svg");
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   background-repeat: no-repeat;
   width: 100%;
@@ -34,38 +27,40 @@ body {
   align-items: center;
 }
 
+.heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 0 0 0;
+  position: relative;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  width: 90%;
-  position: relative;
-  height: 70rem;
-  bottom: 6rem;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.87);
   border-radius: 30px;
+  -webkit-filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.12));
+  filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.12));
+  align-items: center;
 }
 
 .panel {
-  width: 90%;
+  width: 80%;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   color: hsl(240, 6%, 50%);
   font-weight: 400;
-  text-align: left;
   font-size: 0.75rem;
+  position: relative;
+  left: 1.1rem;
 }
 
 .accordian-image {
-  width: 70%;
-  height: 70%;
   top: 1rem;
   position: relative;
-  z-index: 10;
-  -webkit-filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.12));
-  filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.12));
+  z-index: 3;
 }
 .accordian {
   color: var(--violet);
@@ -73,7 +68,6 @@ body {
   border-bottom: var(--dividerColor) 1px solid;
   padding: 1rem 0 1rem 0;
   text-align: left;
-  align-self: stretch;
   background: none;
   position: relative;
   left: 1rem;
@@ -83,7 +77,7 @@ body {
 }
 .accordian-container {
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
 
 .accordian:hover {
@@ -94,6 +88,9 @@ body {
 .downArrow {
   width: 10px;
   height: 7px;
+}
+.rotate {
+  transform: rotate(180deg);
 }
 
 .active {
@@ -107,24 +104,74 @@ body {
   bottom: 0;
   left: 30%;
   right: 30%;
+
+  color: #fff;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(128, 72%, 47%);
 }
 
 .box-image {
   display: none;
 }
 
+@media screen and (max-width: 530px) {
+  .image-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 461px) {
+  .image-container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .image-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  .image-container {
+    content: url("/images/illustration-woman-online-mobile.svg");
+    position: relative;
+    bottom: 7rem;
+    -webkit-filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.07));
+    filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.07));
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .accordian-container {
+    bottom: 5rem;
+  }
+}
+
+/* desktop  height media queries */
+
 @media screen and (max-height: 667px) {
   .container {
-    height: 70rem;
+    height: 80%;
   }
   .heading {
-    padding: 5rem 0 0 0;
+    padding: 0rem 0 0 0;
+    top: 1rem;
   }
   .accordian-image {
-    top: -1rem;
+    bottom: 4rem;
+  }
+  .image-container {
+    bottom: 4rem;
   }
 }
 
@@ -132,50 +179,187 @@ body {
   .heading {
     padding: 0;
   }
-  .accordian-image {
-    top: 2rem;
-  }
 }
 
 @media screen and (min-height: 875px) {
-  .accordian-image {
-    top: 3rem;
-  }
 }
 
-@media screen and (min-width: 811px) {
-  .container {
-    flex-direction: column;
-    z-index: 3;
-    height: 70vh;
+/* desktop width media queries */
+
+@media screen and (min-width: 900px) {
+  body {
+    position: relative;
+  }
+  .image-container {
+    width: auto;
   }
 
-  .accordian {
-    width: 50%;
-    align-self: flex-end;
-    left: -5rem;
-    right: 3rem;
-    z-index: 3;
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    max-width: 1009.4px;
+    max-height: 531.85px;
+    min-height: 496.65px;
+    -webkit-filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(-10px 10px 10px rgba(0, 0, 0, 0.3));
+  }
+
+  .image-container {
+    overflow: hidden;
+    height: 33.25rem;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 116% 65%;
   }
 
   .accordian-image {
-    top: 25rem;
-    right: 10rem;
-    align-self: flex-start;
-    z-index: 4;
-    height: 80%;
-    width: 80%;
-    top: 35rem;
-    right: 15rem;
+    position: relative;
+    right: 4rem;
+    top: 7rem;
+    height: 20rem;
+    margin: 0 10rem 0 0;
   }
 
   .box-image {
-    display: inline;
-    -webkit-filter: drop-shadow(0px 29px 0px rgba(20, 0, 0, 1));
-    filter: drop-shadow(0px 29px 0px rgba(0, 0, 0, 1));
-    position: relative;
+    display: block;
+    -webkit-filter: drop-shadow(0px 29px 0px rgba(20, 0, 10, 0.12));
+    filter: drop-shadow(0px 29px 0px rgba(20, 0, 10, 0.12));
+    position: absolute;
     z-index: 5;
-    top: 21.2rem;
-    right: 27rem;
+    top: 15rem;
+    left: -6rem;
+  }
+
+  .accordian {
+    width: 81%;
+  }
+
+  .heading {
+    position: relative;
+    left: 1rem;
+    bottom: 1rem;
+  }
+
+  .backgroundPat {
+    position: absolute;
+    width: 50%;
+    z-index: 6;
+    left: -1rem;
+    left: -8rem;
+    top: 6rem;
+  }
+}
+
+/* Landscape  mobile phone port */
+
+/* iphone SE landscape */
+
+@media screen and (max-height: 375px) {
+  .container {
+    flex-direction: row;
+  }
+  .accordian {
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  .panel {
+    font-size: 0.58rem;
+  }
+
+  .accordian-container {
+    bottom: 3rem;
+  }
+
+  .heading {
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 3rem 0 0 0;
+  }
+
+  .image-container {
+    bottom: 0;
+  }
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-height: 428px) and (max-width: 926px) {
+  .image-container {
+    content: url("/images/illustration-woman-online-mobile.svg");
+    position: relative;
+    -webkit-filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.07));
+    filter: drop-shadow(0px 29px 0px rgba(29, 30, 53, 0.07));
+    background-image: none;
+    width: 50%;
+    top: 1rem;
+    height: 100%;
+  }
+
+  .container {
+    min-height: 0;
+    height: 90%;
+  }
+
+  .heading {
+    left: 1rem;
+  }
+}
+
+@media screen and (max-height: 375px) and (max-width: 812px) {
+  .container {
+    height: 80%;
+  }
+
+  .image-container {
+    bottom: 1rem;
+    top: 0;
+  }
+}
+
+@media screen and (max-height: 414px) and (max-width: 896px) {
+  .container {
+    flex-direction: row;
+  }
+  .accordian {
+    padding: 0.5rem 0 0.5rem 0;
+  }
+
+  .panel {
+    font-size: 0.58rem;
+  }
+
+  .accordian-container {
+    bottom: 3rem;
+  }
+
+  .heading {
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 3rem 0 0 0;
+  }
+
+  .image-container {
+    bottom: 0;
+  }
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (min-height: 412px) and (min-width: 915px) {
+  .container {
+    height: 92%;
+  }
+
+  .attribution {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 854px) and (min-height: 384px) {
+  .container {
+    margin-bottom: 1.5rem;
   }
 }
