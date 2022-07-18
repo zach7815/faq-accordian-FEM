@@ -12,20 +12,14 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
 
 ## Overview
 
 This was my first Front End Mentor Challenge that used Javascript as well. It is mockup of creating a FAQ Accordian that some businesses may use to answer customer frequently asked questions.
 
-### The challenge
+### What I found Challenging.
 
-Users should be able to:
-
-- View the optimal layout for the component depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Hide/Show the answer to a question when the question is clicked
+This was one of my first projects using JavaScript and manipulating the DOM. It was a challenging in getting the respective questions to expand on click. It was a good practise of using a for loop. The CSS I found challenging was getting the background shadow right and getting the image to hang of its container.
 
 ### Screenshot
 
@@ -35,11 +29,11 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/zach7815/faq-accordian-FEM)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://zach7815.github.io/faq-accordian-FEM/)
 
 ## My process
 
-My process for this was a bit chaotic. I initially started out well doing the HTML but came unstuck in trying to do some CSS elements. This resulted in me needing to change the HTML to be a better structure after looking at other peoples solutions for inspiration.
+I initially started out well doing the HTML but came unstuck in trying to do some CSS elements. This resulted in me needing to change the HTML to be a better structure after looking at other peoples solutions for inspiration.
 
 I then worked on the CSS, but didn't complete it ie make it completely responsive for all media port sizes. I moved a bit too quickly onto the JS.
 
@@ -93,15 +87,3 @@ for (let i = 0; i < acc.length; i++) {
 ### Continued development
 
 I think my next step is to build a design of my first version of my own website portfolio I have planned and made. Once done, I think I will want to build more Front End Mentor projects that include JS functionality but approach the project in a more logical approach, as in this one I kept switching back and forth from editing the CSS and JS.
-
-### Useful resources
-
-- [StackOverflow post on overflow](https://stackoverflow.com/questions/12013066/how-to-ignore-parent-elements-overflowhidden-in-css) - This helped me understand and achieve getting the box image to overflow its container element but not be cut up, allowing me to keep of the images together in one div.
-- [CSS tricks- drop shadow post](https://css-tricks.com/adding-shadows-to-svg-icons-with-css-and-svg-filters/) - This guide helped me understand why my original shadows for the SVGs were so bad, and also help me learn how to position the shadows needed.
-
-## Zachariah Kozlowski-Best
-
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/zach7815)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
